@@ -8,6 +8,7 @@ export default {
   state: () => ({
     loginUser: {
       userName: "未登录",
+      isLogin: false,
     },
   }),
   getters: {},
@@ -27,6 +28,7 @@ export default {
   },
   mutations: {
     updateUser(state, payload) {
+      state.loginUser.isLogin = true;
       state.loginUser = payload;
     },
   },
